@@ -1,0 +1,73 @@
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  padding: 1rem;
+
+  &__ctrl {
+    display: flex;
+    gap: 5px;
+  }
+}
+
+.pagination__list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+}
+
+.pagination__item {
+  display: flex;
+}
+
+.pagination__btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1px solid var(--color-border);
+  background-color: transparent;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-text);
+  padding: 0.6rem 1rem;
+  transition: all 0.15s ease;
+  border-radius: 8px;
+  cursor: pointer;
+  outline: none;
+
+  svg {
+    fill: currentColor;
+  }
+
+  &--active {
+    color: white;
+    background: var(--color-active-bg);
+    border-color: var(--color-active-border);
+    box-shadow: 0px 2px 8px var(--color-active-shadow);
+    outline: 3px solid var(--color-outline);
+
+    svg {
+      fill: currentColor;
+    }
+  }
+
+  &:hover {
+    border-color: var(--color-border-hover);
+  }
+
+  &:focus-visible {
+    outline: 2px dashed var(--color-focus-outline);
+  }
+
+  &:disabled {
+    color: var(--color-disabled);
+    border-color: var(--color-border-disabled);
+    cursor: not-allowed;
+
+    svg {
+      fill: var(--color-disabled);
+    }
+  }
+}
